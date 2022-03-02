@@ -1,0 +1,15 @@
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/bin/Debug/net5.0/mis321-pa2-Lcmims1.deps.json
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/bin/Debug/net5.0/mis321-pa2-Lcmims1.runtimeconfig.json
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/bin/Debug/net5.0/mis321-pa2-Lcmims1.runtimeconfig.dev.json
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/bin/Debug/net5.0/mis321-pa2-Lcmims1.dll
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/bin/Debug/net5.0/ref/mis321-pa2-Lcmims1.dll
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/bin/Debug/net5.0/mis321-pa2-Lcmims1.pdb
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.csprojAssemblyReference.cache
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.AssemblyInfoInputs.cache
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.AssemblyInfo.cs
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.csproj.CoreCompileInputs.cache
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.dll
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/ref/mis321-pa2-Lcmims1.dll
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.pdb
+/Users/carlizmims/Desktop/college/source/repos/MIS321/mis321-pa2-Lcmims1/obj/Debug/net5.0/mis321-pa2-Lcmims1.genruntimeconfig.cache
