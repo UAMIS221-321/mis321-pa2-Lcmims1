@@ -5,7 +5,7 @@ namespace mis321_pa2_Lcmims1
     {
 
         
-        public void Attack(Character player1, Character player2){
+        public double Attack(Character player1, Character player2){
            System.Console.WriteLine("Jack Sparrow has distracted his opponent"); 
            double damageDealt = 0.0;
            if(player2.Name == "Will Turner"){
@@ -15,7 +15,9 @@ namespace mis321_pa2_Lcmims1
            else {
             player2.Health = player2.AttackStrength - player2.DefensivePower;
         }
-            player2.PrintStats(player2, damageDealt);
+           
+            player1.PrintStats(player2, damageDealt);
+            return damageDealt;
        }
     //    public void Defend(){
     //        System.Console.WriteLine("I am defending myself");

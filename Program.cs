@@ -41,6 +41,8 @@ namespace mis321_pa2_Lcmims1
         bool shouldExit = false;
         while (!shouldExit){
         
+        // Console.WriteLine("What is your name?");
+        // player1.Username = Console.ReadLine();
         Console.WriteLine("Please enter the number of the player you would like to fight with:\n1)Jack Sparrow\n2)Will Turner\n3)Davy Jones\n4)Exit Game");
         p1choice = int.Parse(Console.ReadLine());
         switch(p1choice){
@@ -57,18 +59,18 @@ namespace mis321_pa2_Lcmims1
                 EndGame();
                 shouldExit = true;
                 return p1choice;
-                break;
             default:
                 Console.WriteLine("\nYou entered: " + (p1choice) + "\nSorry that's an invaild selection.");
                 break; 
         }
-        }
+        //}
        
         Character player2 = new Character();
         int p2choice = 0;
         // bool shouldExit = false;
-        while(!shouldExit){
-            
+        //while(!shouldExit){
+            // Console.WriteLine("What is your name?");
+            // player2.Username = Console.ReadLine();
             Console.WriteLine("Please enter the number of the player you would like to fight with:\n1)Jack Sparrow\n2)Will Turner\n3)Davy Jones\n4)Exit Game");
             p2choice = int.Parse(Console.ReadLine());
             switch(p2choice){
@@ -85,21 +87,22 @@ namespace mis321_pa2_Lcmims1
                 EndGame();
                 shouldExit = true;
                 return p2choice;
-                break;
                 default:
                     Console.WriteLine("\nYou entered: " + (p2choice) + "\nSorry that's an invaild selection.");
                     break;
             }
+            System.Console.WriteLine("......................");
+            GamePlay(player1, player2);
 
         }   
 
-        
-        player2.PrintStats( player2, damageDealt);
-
+      
         return 0;
     }
     static Character JS(){
         Character js = new Character();
+        Console.WriteLine("What is your name?");
+        js.Username = Console.ReadLine();
         js.Name = "Jack Sparrow";
         js.characterbehavior =new JackSparrow(); 
         Console.WriteLine("Great Choice! Your attack will be distracting your opponent\n\n");
@@ -107,6 +110,8 @@ namespace mis321_pa2_Lcmims1
     }
     static Character DJ(){
         Character dj = new Character();
+        Console.WriteLine("What is your name?");
+        dj.Username = Console.ReadLine();
         dj.Name = "Davy Jones";
         dj.characterbehavior = new DavyJones();
         Console.WriteLine("Great Choice! Your attack will be cannon fire\n\n");
@@ -114,47 +119,40 @@ namespace mis321_pa2_Lcmims1
     }
     static Character WT(){
         Character wt = new Character();
+        Console.WriteLine("What is your name?");
+        wt.Username = Console.ReadLine();
         wt.Name = "Will Turner";
         wt.characterbehavior = new WillTurner();
         Console.WriteLine("Great Choice! Your attack will be using your sword\n\n");
         return wt;
     }
     
-    static void PlayGame(){
-        Random pickPlayer = new Random();
-        //Who goes first 
-        int whoGoesFirst = pickPlayer.Next(1,2);
-        if(whoGoesFirst != 0){
-            if(whoGoesFirst == 2){
-                Player2Turn();
-            }
-            whoGoesFirst = 0;
+
+    
+    static void GamePlay(Character player1, Character player2){
+       
+        if(player2.AttackStrength < player1.AttackStrength){
+           player2.characterbehavior.Attack(player1, player2);
+            //player1.PrintStats(player2,damageDealt); 
         }
-        // PrintStats(Character player2, double damageDealt);
-    }
-    static void Player2Turn(){
-
-    }
-
-    static void GamePlayplayer(Character player1, Character player2, double damageDealt){
-        while(player1.health > 0 && player2.health > 0){
-        player1.Attack();
-        PrintStats(player2, damageDealt);
-        player2.Attack();
-        PrintStats(player2,damageDealt);
+        while(player1.Health > 0 && player2.Health > 0){
+        player1.characterbehavior.Attack(player2, player1);
+        if(player2.Health <= 0){
+        // player2.characterbehavior.Attack(player1, player2);
+        break;
+        }
+        player2.characterbehavior.Attack(player2, player1);
         }
 
-        if(player2.health = 0){
-            System.Console.WriteLine(Player1 + "has won!");
+        if(player2.Health <= 0){
+            System.Console.WriteLine(player1.Username + " has won!");
         }
 
-        if(player1.health = 0){
-            System.Console.WriteLine(Player2 + "has won!");
+        if(player1.Health <= 0){
+            System.Console.WriteLine(player2.Username + " has won!");
         }
        
     }
-    p1choic attack
-    printstats
     static void EndGame(){
         Console.WriteLine("Thank you for playing.");
     }

@@ -5,6 +5,7 @@ namespace mis321_pa2_Lcmims1
     public class Character 
     {
         public string Name {get; set;}
+        public string Username { get; set; }
         public int MaxPower {get;set;}
         public double Health {get; set;}
         public int AttackStrength {get;set;}
@@ -15,9 +16,9 @@ namespace mis321_pa2_Lcmims1
             this.characterbehavior = new CharacterBehavior();
             this.Health = 100;
             Random ranNum = new Random();  
-            int power = ranNum.Next(1,100);
-            int dpower = ranNum.Next(1,power);
-            int strength = ranNum.Next(1,power);
+            MaxPower = ranNum.Next(1,100);
+            DefensivePower = ranNum.Next(1,MaxPower);
+            AttackStrength = ranNum.Next(1,MaxPower);
         }
 
     //     static void PowerStats(){
@@ -30,11 +31,11 @@ namespace mis321_pa2_Lcmims1
     // }
 
     public void PrintStats(Character player2, double damageDealt){
-        System.Console.WriteLine("Current Stats:\n "+ this.Name +" "+this.characterbehavior+ " and "+ player2.Name+" took a damage of "+damageDealt+"");
-        System.Console.WriteLine(this.Name);
-        System.Console.WriteLine("\n\tHealth: " + this.Health + "\nMax Power: "+this.MaxPower+" Defense Power: "+this.DefensivePower+" Attack Power: "+this.AttackStrength+"");
+        System.Console.WriteLine("Current Stats:\n "+this.Name +" took a damage of "+damageDealt+"");
+        // System.Console.WriteLine(this.Name);
+        System.Console.WriteLine("\nHealth: " + this.Health + "\nMax Power: "+this.MaxPower+" Defense Power: "+this.DefensivePower+" Attack Power: "+this.AttackStrength+"");
         System.Console.WriteLine(player2.Name);
-        System.Console.WriteLine("\n\tHealth: " + player2.Health + "\nMax Power: "+player2.MaxPower+" Defense Power: "+player2.DefensivePower+" Attack Power: "+player2.AttackStrength+"");
+        System.Console.WriteLine("\nHealth: " + player2.Health + "\nMax Power: "+player2.MaxPower+" Defense Power: "+player2.DefensivePower+" Attack Power: "+player2.AttackStrength+"");
     }
     }
 }
